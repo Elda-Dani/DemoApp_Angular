@@ -9,6 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewComponent } from './view/view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes:Routes=[
   {
@@ -16,6 +18,12 @@ const appRoutes:Routes=[
   },
   {
     path:"view",component:ViewComponent
+  },
+  {
+    path:"login",component:LoginComponent
+  },
+  {
+    path:"dashboard",component:DashboardComponent
   }
 ]
 
@@ -24,7 +32,9 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     AddDemoComponent,
-    ViewComponent
+    ViewComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
