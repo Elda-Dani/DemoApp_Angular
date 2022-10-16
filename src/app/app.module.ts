@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddDemoComponent } from './add-demo/add-demo.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { ViewComponent } from './view/view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
   {
     path:"",component:AddDemoComponent
+  },
+  {
+    path:"view",component:ViewComponent
   }
 ]
 
@@ -18,12 +22,14 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddDemoComponent
+    AddDemoComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
